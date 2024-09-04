@@ -8,6 +8,10 @@ import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/publi
 const supabase: Handle = async ({ event, resolve }) => {
   log.bold(`New request being made from ${event.url.pathname}`);
 
+  // Log cookies
+  const cookies = event.cookies.getAll();
+  log.plain("Cookies: " + JSON.stringify(cookies));
+
   /**
    * Creates a Supabase client specific to this server request.
    *
@@ -65,7 +69,7 @@ const supabase: Handle = async ({ event, resolve }) => {
       log.error("No user found");
       return { session: null, user: null }
     }
-    
+
     log.plain("User found: " + JSON.stringify(user));
 
     return { session, user }
