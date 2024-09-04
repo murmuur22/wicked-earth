@@ -1,15 +1,13 @@
 import { db } from "$lib/db";
 import { profiles } from "$lib/db/schema";
+import log from "$lib/utils/log";
 import { error } from "@sveltejs/kit";
 import { eq } from "drizzle-orm";
 
 export const getOrCreateUserProfile = async (locals: App.Locals) => {
 
-
   // get user from supabase
   const { user } = await locals.safeGetSession();
-
-  return user;
 
   // return null if no user
   if (!user) {
@@ -25,6 +23,8 @@ export const getOrCreateUserProfile = async (locals: App.Locals) => {
   if (currentProfile) {
     return currentProfile;
   }
+
+  log.plain(user.id + " " + user.email)
 
   // create profile
   await db.insert(profiles).values({
