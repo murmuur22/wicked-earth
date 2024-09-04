@@ -8,10 +8,6 @@ import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/publi
 const supabase: Handle = async ({ event, resolve }) => {
   log.bold(`New request being made from ${event.url.pathname}`);
 
-  // Log cookies
-  const cookies = event.cookies.getAll();
-  log.plain("Cookies: " + JSON.stringify(cookies));
-
   /**
    * Creates a Supabase client specific to this server request.
    *
@@ -32,6 +28,11 @@ const supabase: Handle = async ({ event, resolve }) => {
       },
     },
   })
+
+  // Log all cookies
+  const cookies = event.cookies.getAll();
+  log.plain("All Cookies: " + JSON.stringify(cookies));
+
 
   /**
    * Unlike `supabase.auth.getSession()`, which returns the session _without_
