@@ -24,7 +24,7 @@ export const getOrCreateUserProfile = async (locals: App.Locals) => {
     return currentProfile;
   }
 
-  log.plain(user.id + " " + user.email)
+  log.plain(" HELLO FROM getOrCreateUserProfile: " user.id + " " + user.email)
 
   // create profile
   await db.insert(profiles).values({
