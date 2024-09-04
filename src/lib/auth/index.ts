@@ -5,8 +5,11 @@ import { eq } from "drizzle-orm";
 
 export const getOrCreateUserProfile = async (locals: App.Locals) => {
 
+
   // get user from supabase
   const { user } = await locals.safeGetSession();
+
+  return user;
 
   // return null if no user
   if (!user) {

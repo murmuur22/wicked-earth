@@ -13,7 +13,6 @@ export const GET = async (event) => {
     if (!error) {
       throw redirect(303, `/${next.slice(1)}`);
     }
-    console.log(error);
   }
 
   // return the user to an error page with instructions

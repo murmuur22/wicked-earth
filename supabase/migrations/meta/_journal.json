@@ -15,6 +15,20 @@
       "when": 1725410426590,
       "tag": "0001_dashing_dreaming_celestial",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1725467896616,
+      "tag": "0002_luxuriant_marten_broadcloak",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1725468333123,
+      "tag": "0003_nervous_jasper_sitwell",
+      "breakpoints": true
     }
   ]
 }
