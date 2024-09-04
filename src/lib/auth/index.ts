@@ -9,6 +9,9 @@ export const getOrCreateUserProfile = async (locals: App.Locals) => {
     // get user from supabase
     const { user } = await locals.safeGetSession();
 
+    // log the result of safeGetSession
+    log.plain("Result from safeGetSession: " + JSON.stringify(user));
+
     // return null if no user
     if (!user) {
       log.error("No user found in session");
