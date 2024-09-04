@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS "profiles" (
+	"id" uuid PRIMARY KEY NOT NULL,
+	"username" text NOT NULL
+);
+
+ALTER TABLE "profiles" ENABLE ROW LEVEL SECURITY;

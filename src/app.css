@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'bahnschrift';
+	src: url('/fonts/bahnschrift/BAHNSCHRIFT.TTF') format('truetype');
+}
+@font-face {
+	font-family: 'sometype-mono';
+	src: url('/fonts/sometype-mono/SometypeMono-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'helvetica-neue';
+	src: url('/fonts/helvetica-neue/HelveticaNeueMed.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'helvetica-neue-light';
+	src: url('/fonts/helvetica-neue/HelveticaNeueLt.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'helvetica-neue-ultralight';
+	src: url('/fonts/helvetica-neue/HelveticaNeue.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'terminal-grotesque';
+	src: url('/fonts/terminal-grotesque/terminal-grotesque.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'vcr-osd-mono';
+	src: url('/fonts/vcr-osd-mono/VCR_OSD_MONO_1.001.ttf') format('truetype');
+}
